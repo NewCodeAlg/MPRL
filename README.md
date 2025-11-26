@@ -5,4 +5,4 @@ Extract offline protein language model embedding representations using the follo
 
 
 # Note
-The article has not been officially accepted yet, and the corresponding code will be uploaded after the article is formally accepted.
+We have created a simple MPRL algorithm implementation

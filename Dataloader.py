@@ -14,7 +14,7 @@ def SimpleColl(batch):
     
     return embeddings, solubility,len
 
-class MySelfEmbeddingDataSet(Dataset):
+class SimpleDataSet(Dataset):
     def __init__(self, embeddings_path,
                  fasta_path,
                  transform=lambda x: x) -> None:
@@ -61,6 +61,7 @@ class MySelfEmbeddingDataSet(Dataset):
         shuffle=True,
         collate_fn=coll
     )
+
 
 
 

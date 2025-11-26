@@ -23,7 +23,7 @@ class MPRL(nn.Module):
         self.attention2 = nn.MultiheadAttention(embed_dim=256, num_heads=num_heads, batch_first=True)
         self.fc = nn.Linear(256+128, num_classes)
 
-    def forward(self, x):
+    def forward(self, x ,mask):
         x1 = x.unsqueeze(1) 
         x1 = [conv(x1).squeeze(3) for conv in self.convs] 
         x1 = [torch.relu(item) for item in x1]  
@@ -41,5 +41,6 @@ class MPRL(nn.Module):
 
         x = torch.mean(x, dim=1) 
         out = self.fc(x) 
+
 
         return out

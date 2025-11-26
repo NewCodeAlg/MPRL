@@ -35,12 +35,12 @@ class MPRL(nn.Module):
         x1,_= self.attention2(x1,x1,x1)
 
         x, _ = self.bilstm(x)  
-        x, attention_weights = self.attention1(x, x, x)
+        x, _ = self.attention1(x, x, x)
         x = torch.cat((x1,x),dim=2)
-        attention_weights = attention_weights.mean(dim=1)  
 
         x = torch.mean(x, dim=1) 
         out = self.fc(x) 
 
 
         return out
+

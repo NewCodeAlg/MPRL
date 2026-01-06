@@ -8,4 +8,5 @@ Extract offline protein language model embedding representations using the follo
 We have created a simple MPRL algorithm implementation. The code is gradually being organized and uploaded.
 
 # Citation Template
-Updating...
+MPRL: Multi-Perspective Representation Learning for Accurate and Generalizable Protein Solubility Prediction. 
+Expert Systems with Applications. 2026.
